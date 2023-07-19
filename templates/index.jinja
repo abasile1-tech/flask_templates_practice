@@ -1,0 +1,13 @@
+{% extends 'base.jinja' %} {% block content %}
+<h1>{{ title }} !!!</h1>
+<ul>
+  {% for task in tasks %}  
+    <li>
+      {{ task.title }}: <b>{{ task.description }}</b>
+      {% if task.done %}
+        <span> &#9989;</span>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+{% endblock content %}

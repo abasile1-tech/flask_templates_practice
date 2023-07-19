@@ -5,4 +5,4 @@ tasks_blueprint = Blueprint("tasks", __name__)
 
 @tasks_blueprint.route('/tasks')
 def index():
-    return render_template('index.html', title='My Task List', tasks=tasks)
+    return render_template('index.jinja', title='My Task List', tasks=tasks)
